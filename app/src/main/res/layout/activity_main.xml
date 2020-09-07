@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tv_texto"
+        android:text="Calculador de média"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/et_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_texto"
+        android:hint="Digite seu Nome"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:id="@+id/et_n1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_nome"
+        android:hint="Digite a primeira nota"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_n2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_n1"
+        android:hint="Digite a segunda nota"
+        android:inputType="number" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_calcular"
+        app:layout_constraintTop_toBottomOf="@id/et_n2"
+        android:layout_marginTop="25dp"
+        android:text="Calcular"
+        android:onClick="calcular"/>
+
+    <!-- Campos depois do cálculo -->
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="nooome"
+        app:layout_constraintTop_toBottomOf="@id/btn_calcular"
+        android:id="@+id/et_result_nome"
+        android:layout_marginTop="25dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Situação: "
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/et_result_nome"
+        android:id="@+id/et_sit_text"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="sitvalue"
+        app:layout_constraintLeft_toRightOf="@id/et_sit_text"
+        app:layout_constraintTop_toTopOf="@id/et_sit_text"
+        android:id="@+id/et_sit_result" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Media: "
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/et_sit_result"
+        android:id="@+id/et_media_text"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="mediavalue"
+        app:layout_constraintLeft_toRightOf="@id/et_media_text"
+        app:layout_constraintTop_toTopOf="@id/et_media_text"
+        android:id="@+id/et_media_result" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
